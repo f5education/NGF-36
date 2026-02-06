@@ -9,6 +9,6 @@ ssh-keyscan -H k8s >> ~/.ssh/known_hosts
 scp k8s:~/.kube/config ~/.kube
 sed --in-place 's/127.0.0.1/k8s/' ~/.kube/config
 echo -e "\nKUBECONFIG=~/.kube/config" >> ~/.bashrc
-sudo snap install helm --classic
-sudo snap install grpcurl --edge
+###sudo snap install helm --classic
+###sudo snap install grpcurl --edge
 kubectl delete node nginx    # for some reason this non-existent "node" is "sticky"

@@ -12,3 +12,7 @@ echo -e "\nKUBECONFIG=~/.kube/config" >> ~/.bashrc
 sudo snap install helm --classic
 sudo snap install grpcurl --edge
 kubectl delete node nginx    # for some reason this non-existent "node" is "sticky"
+cat <<EOF | sudo tee -a /etc/hosts
+10.10.1.180          cafe.f5trn.com
+10.10.1.180          echo.f5trn.com
+EOF
